@@ -1,0 +1,158 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Menus;
+
+import java.awt.*;
+import javax.swing.*;
+
+/**
+ *
+ * @author sisso
+ */
+public class TpJavaSwing {
+   public static void main(String[] arg) {
+
+    JFrame frame = new JFrame("Bonjour tout le monde");  
+    JPanel panel=new JPanel();
+    JMenuBar menu = new JMenuBar();
+    JMenu file =new JMenu("Fichier");
+    JMenu edit =new JMenu("Edition");
+    JMenu help =new JMenu("Aide");
+    
+    JMenuItem newfile=new JMenuItem("Nouveau");
+    JMenuItem supp=new JMenuItem("Ouvrir");
+    JMenuItem save=new JMenuItem("Enregistrer");
+    
+    
+    file.add(newfile);
+    file.add(supp);
+    file.add(save);
+    
+    menu.add(file);
+    menu.add(edit);
+    menu.add(help);
+    
+  
+    
+     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    
+    
+
+        frame.setLayout(new GridLayout(25, 5));
+        frame.add(menu);
+        frame.add(panel);
+        frame.pack();
+        frame.setSize(1000, 500);
+
+        JLabel label = new JLabel("Remplisez le formulaire", JLabel.CENTER);
+        frame.add(label);
+
+
+        JLabel label1 = new JLabel("Nom", JLabel.LEFT);
+        frame.add(label1);
+
+        JTextField text1 = new JTextField(10);
+        text1.setBounds(10,20,90,14);
+        frame.add(text1);
+
+        JLabel label2 = new JLabel("Prenom", JLabel.LEFT);
+        frame.add(label2);
+
+        JTextField text2 = new JTextField();
+        text2.setBounds(10,20,90,14);
+        frame.add(text2);
+
+        JLabel label3 = new JLabel("Age", JLabel.LEFT);
+        frame.add(label3);
+
+        JTextField text3 = new JTextField();
+        text3.setBounds(10,20,90,14);
+        frame.add(text3);
+
+        JLabel label4 = new JLabel("Telephone", JLabel.LEFT);
+        frame.add(label4);
+
+        JTextField text4 = new JTextField();
+        text4.setBounds(10,20,90,14);
+        frame.add(text4);
+
+        JLabel label5 = new JLabel("Email", JLabel.LEFT);
+        frame.add(label5);
+
+        JTextField text5 = new JTextField();
+        text5.setBounds(10,20,90,14);
+        frame.add(text5);
+
+        JLabel label6 = new JLabel("Genre", JLabel.LEFT);
+        frame.add(label6);
+
+        String[] Genre = {"Homme", "Femme"};
+        JComboBox cb = new JComboBox(Genre);
+        frame.add(cb);
+
+        JLabel label7 = new JLabel("Specialite", JLabel.CENTER);
+        frame.add(label7);
+
+        JPanel panel1 = new JPanel();
+        ButtonGroup group = new ButtonGroup();
+        JRadioButton radio1 = new JRadioButton("Reseau", true);
+        JRadioButton radio2 = new JRadioButton("Developpement Web/Mobile", false);
+        JRadioButton radio3 = new JRadioButton("Marketing Digital", false);
+        JRadioButton radio4 = new JRadioButton("Finance", false);
+
+        group.add(radio1);
+        group.add(radio2);
+        group.add(radio3);
+        group.add(radio4);
+
+        panel1.add(radio1);
+        panel1.add(radio2);
+        panel1.add(radio3);
+        panel1.add(radio4);
+
+        frame.add(panel1);
+        frame.pack();
+
+        JPanel panel2 = new JPanel();
+        JLabel label8 = new JLabel("Activite", JLabel.CENTER);
+        frame.add(label8);
+
+        JCheckBox checkBox1 = new JCheckBox("Jeux/Video", true);
+        JCheckBox checkBox2 = new JCheckBox("Lecture");
+        JCheckBox checkBox3 = new JCheckBox("Jardinage", true);
+        JCheckBox checkBox4 = new JCheckBox("Sport");
+        JCheckBox checkBox5 = new JCheckBox("Cuisine");
+
+        panel2.add(checkBox1);
+        panel2.add(checkBox2);
+        panel2.add(checkBox3);
+        panel2.add(checkBox4);
+        panel2.add(checkBox5);
+
+        frame.add(panel2);
+        frame.pack();
+
+        JLabel label9 = new JLabel("Description", JLabel.CENTER);
+        frame.add(label9);
+        JTextArea text = new JTextArea();
+        text1.setBounds(10,20,100,14);
+        frame.add(text);
+
+        JPanel panel3 = new JPanel();
+
+        JButton btn1 = new JButton("Valider");
+        JButton btn2 = new JButton("Annuler");
+
+        panel3.add(btn1);
+        panel3.add(btn2);
+
+        frame.add(panel3);
+        frame.pack();
+
+    }
+} 
+
